@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test" duration-ms="85477" started-at="2021-08-04T09:50:32 BST" finished-at="2021-08-04T09:51:57 BST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@1787f2a0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test" duration-ms="85477" started-at="2021-08-04T09:50:32 BST" finished-at="2021-08-04T09:51:57 BST">
+      <class name="cucumberOptions.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberOptions.TestRunner@1787f2a0]" name="setUpClass" is-config="true" duration-ms="986" started-at="2021-08-04T09:50:32 BST" finished-at="2021-08-04T09:50:33 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumberOptions.TestRunner@1787f2a0]" name="runScenario" duration-ms="84095" started-at="2021-08-04T09:50:33 BST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-08-04T09:51:57 BST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add products into wishList and verify products are added in the cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add product in the cart which is having lowest price of the products added in my wishlist]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberOptions.TestRunner@1787f2a0]" name="tearDownClass" is-config="true" duration-ms="226" started-at="2021-08-04T09:51:57 BST" finished-at="2021-08-04T09:51:57 BST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberOptions.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Test -->
+</testng-results>
