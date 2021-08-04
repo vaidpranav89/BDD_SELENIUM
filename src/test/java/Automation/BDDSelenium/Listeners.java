@@ -12,7 +12,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 
-
 import resources.ExtentReporterNG;
 import resources.base;
 

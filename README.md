@@ -2,15 +2,15 @@ Cucumber BDD framework
 
 Approach
 
-
-
 Selenium-cucumber is a behavior driven development (BDD) approach to write automation test script to test Web. Framework
 has been built using Page Object Model and Page Factory. Page Object Model is a design pattern which has become popular
-in test automation for enhancing test maintenance and reducing code duplication. Page Factory is an inbuilt Page Object
-Model concept for Selenium WebDriver, but it is very optimized. With the help of PageFactory class, we use annotations
-@FindBy to find WebElement and use initElements method to initialize web elements. WebDriverManager library is used,
-which allows to automate the management of the binary drivers (e.g. chromedriver, geckodriver, etc.) required by
-Selenium WebDriver.
+in test automation for enhancing test maintenance and reducing code duplication. 
+
+### Import the project in eclipse as Maven project
+### To run, Right-click on Runner class and select Run as TestNGTEST or Alternatively from maven - mvn test verify
+
+ 
+
 
 
 
@@ -85,3 +85,4 @@ Extent reports captures the screenshot of failed test but is not suitable for cu
 #### Logging
 
 Log4j logging is configured in the log4j.properties to output at INFO level to the console.
+

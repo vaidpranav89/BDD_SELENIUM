@@ -31,9 +31,9 @@ public class WishListPage {
 		return driver.findElements(productName).size();
 	}
 
-	public int findLowestprice(WebDriver driver) {
+	public int findLowestprice(WebDriver driver, int[] product_ID) {
 		int product_code_to_be_added = 0;
-		int[] product_ID = { 14, 20, 24, 18 };
+		// int[] product_ID = { 14, 20, 24, 18 };
 		String min_value = "";
 		String price = "";
 

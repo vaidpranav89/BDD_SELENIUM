@@ -26,30 +26,36 @@ public class stepDefination extends base {
 	String LowestProductName;
 	String LowestPrice;
 	int LowestProductid;
+	int[] product_ID = { 14, 20, 24, 18 };
 
 	@Given("^I Initialize the browser with chrome$")
 	public void i_initialize_the_browser_with_chrome() throws Throwable {
 		driver = initializeDriver();
+		log.info("Browser is launched");
 	}
 
 	@When("^I add the four products in wishlist$")
 	public void i_add_the_four_product_in_wishlist() throws Throwable {
+		
+		log.info("Products are selected with product id 14, 20, 24, 18 ");
 
-		int[] product_ID = { 14, 20, 24, 18 };
+		
 		homepage.addToWishList(driver, product_ID);
 
 	}
 
 	@When("^I view my wishlist table$")
 	public void i_view_my_wishlist_table() throws Throwable {
-
+		
 		homepage.navigateToWishlist(driver);
+		log.info("customer is navigated to Wishlist page");
 	}
 
 	@When("^I search for lowest price product$")
 	public void i_search_for_lowest_price_product() throws Throwable {
 
-		LowestProductid = wishlist.findLowestprice(driver);
+		LowestProductid = wishlist.findLowestprice(driver,product_ID );
+		log.info("Product with lowest id is fetched and product with id has lowest price"+ LowestProductid);
 
 	}
 
@@ -57,13 +63,14 @@ public class stepDefination extends base {
 	public void i_find_total_four_selected_items_in_my_wishlist() throws Throwable {
 
 		Assert.assertEquals(wishlist.productSize(driver), 4);
+		log.info("Validated on Wishlistpage and can confirm only 4 products are in list");
 	}
 
 	@Then("^I am able to verify the item in my cart$")
 	public void i_am_able_to_verify_the_item_in_my_cart() throws Throwable {
 		String cartProductName = cp.print_product_name(driver);
-
 		Assert.assertEquals(cartProductName, LowestProductName);
+		log.info("Validated product added to card with lowest price is seen on checkoutpage as well");
 
 	}
 
@@ -80,12 +87,14 @@ public class stepDefination extends base {
 	public void i_am_able_add_lowest_price_item_to_my_cart() throws Throwable {
 
 		LowestProductName = wishlist.addLowestProductToCart(driver, LowestProductid);
+		log.info("Product"+ LowestProductName +" has lowest price");
 
 	}
 
 	@And("^I close the browser$")
 	public void i_close_the_browser() throws Throwable {
 		driver.close();
+		log.info("Closing browser");
 	}
 
 	// method to get the price for the product on the wishlistpage
@@ -98,12 +107,14 @@ public class stepDefination extends base {
 
 		List<WebElement> check_del_tag = driver.findElements(By.xpath(discount_tag));
 		if (check_del_tag.size() > 0) {
+			
 			price_locator = "//tr[@id='yith-wcwl-row-" + product_ID + "']/td[4]/ins/span/bdi";
 		} else {
 			price_locator = "//tr[@id='yith-wcwl-row-" + product_ID + "']/td[4]/span[1]/bdi";
 		}
 
 		price = driver.findElement(By.xpath(price_locator)).getText();
+		log.info("Lowest price product is of price"+ price) ;
 
 		return price;
 
