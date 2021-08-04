@@ -6,14 +6,6 @@ Selenium-cucumber is a behavior driven development (BDD) approach to write autom
 has been built using Page Object Model and Page Factory. Page Object Model is a design pattern which has become popular
 in test automation for enhancing test maintenance and reducing code duplication. 
 
-### Import the project in eclipse as Maven project
-### To run, Right-click on Runner class and select Run as TestNGTEST or Alternatively from maven - mvn test verify
-
- 
-
-
-
-
 ### Tools And Environment
 
 
@@ -29,38 +21,13 @@ specified in here https://www.mkyong.com/maven/how-to-install-maven-in-windows/
 
 
 
-### The project directory structure
-
- 
-
-The project has build scripts for Maven and below is describes the directory structure of the project
-
-
-~~~~
-src
-  + test
-    + java                          Test runners and supporting code
-    + resources
-      + features                    Feature files
-          Registration.feature
-      config.properties      
-      log4j.xml       
-      
-~~~~
-
- 
-
 ### **Executing the tests**
-
 
 Please make sure to have all the tools and libraries mentioned in the "Tools And Environment" section.
 
 Step-1: Clone the repository from  https://github.com/vaidpranav89/BDD_SELENIUM.git
 
-
 Step-2: Use the following maven commands to run the tests.
-
- 
 
 Run all tests - Browser configration can be updated in data.properties
 
@@ -85,4 +52,14 @@ Extent reports captures the screenshot of failed test but is not suitable for cu
 #### Logging
 
 Log4j logging is configured in the log4j.properties to output at INFO level to the console.
+
+Screenshots of the demo test are
+
+![image](https://user-images.githubusercontent.com/28826960/128158785-3c69da05-3551-4029-abb3-052c56b46664.png)
+![image](https://user-images.githubusercontent.com/28826960/128158802-db80d958-e250-423b-a230-54b9effbac8c.png)
+![image](https://user-images.githubusercontent.com/28826960/128158812-ca4f219a-7593-42ab-8f0f-78eb04f0dbdc.png)
+![image](https://user-images.githubusercontent.com/28826960/128158829-50fa2c92-6ffb-4d39-9998-01463ebe97fc.png)
+
+
+
 
